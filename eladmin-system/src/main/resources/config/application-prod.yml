@@ -104,7 +104,7 @@ springfox:
   documentation:
     swagger:
       v2:
-        host: http://178.18.244.45:8000/
+        host: 178.18.244.45:8000
 
 #是否开启 swagger-ui
 swagger:
