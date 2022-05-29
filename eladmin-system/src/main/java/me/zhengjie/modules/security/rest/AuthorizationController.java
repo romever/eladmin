@@ -45,6 +45,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -102,6 +103,7 @@ public class AuthorizationController {
             put("token", properties.getTokenStartWith() + token);
             put("user", jwtUserDto);
         }};
+        log.info("login properties: " + loginProperties);
         if (loginProperties.isSingleLogin()) {
             //踢掉之前已经登录的token
             onlineUserService.checkLoginOnUser(authUser.getUsername(), token);
