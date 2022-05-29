@@ -62,7 +62,7 @@ public class OnlineUserService {
             log.error(e.getMessage(),e);
         }
         boolean r = redisUtils.set(properties.getOnlineKey() + token, onlineUserDto, properties.getTokenValidityInSeconds()/1000);
-        log.info(String.format("%s, %s, %s", r, token, onlineUserDto));
+        log.info(String.format("%s, %s, %s, %s", r, token, onlineUserDto, properties));
     }
 
     /**
